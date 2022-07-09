@@ -122,6 +122,7 @@ img {
   line-height: 1.19;
 
   margin-right: 93px;
+  transition: 250ms var(--time-distribution);
 }
 .logo:hover span,
 .logo:focus span {
@@ -140,6 +141,7 @@ img {
   margin-bottom: 20px;
   text-decoration: none;
   line-height: 1.19;
+  transition: 250ms var(--time-distribution);
 }
 .logo-footer:hover span,
 .logo-footer:focus span {
@@ -159,6 +161,7 @@ img {
   line-height: 1.14;
 
   letter-spacing: 0.02em;
+  transition: 250ms var(--time-distribution);
   color: var(--title-text-color);
 }
 .current::after {
@@ -326,7 +329,8 @@ a {
   display: block;
   margin: auto;
   min-width: 200px;
-  /* justify-content: center; */
+
+  transition: 250ms var(--time-distribution);
 }
 .issue:hover,
 .issue:focus {
@@ -513,20 +517,14 @@ a {
   background-color: var(--white-color);
   fill: var(--icon-fill);
   outline: none;
+  transition: 250ms var(--time-distribution);
 }
 .network-link:hover,
 .network-link:focus {
   background-color: var(--accent-color);
   fill: var(--white-color);
 }
-/* .network-icon {
-  fill: var(--icon-color);
-} */
 
-/* .network-icon:hover,
-.network-icon:focus {
-  fill: var(--white-color);
-} */
 .list-employee {
   display: flex;
   margin: 0;
@@ -618,6 +616,8 @@ a {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   outline: none;
+
+  transition: 250ms var(--time-distribution);
 }
 
 /* ---------------------------------------------------------------ХОВЕР И ФОКУС ИКОНОК КЛИЕНТОВ------------------------------------------------ */
@@ -664,6 +664,8 @@ a {
   text-align: center;
 
   justify-content: center;
+
+  transition: 250ms var(--time-distribution);
 }
 .marketing {
   margin: 0;
@@ -756,6 +758,8 @@ a {
   list-style: none;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: 250ms var(--time-distribution);
 }
 .contacts-link:hover,
 .contacts-link:focus {
@@ -809,6 +813,8 @@ a {
 .mailto-footer {
   color: var(--footer-contacts-color);
   margin-bottom: 9px;
+
+  transition: 250ms var(--time-distribution);
 }
 .mailto-footer:hover,
 .mailto-footer:focus {
@@ -823,11 +829,15 @@ a {
 .tel-footer {
   color: var(--footer-contacts-color);
   text-decoration: none;
+
+  transition: 250ms var(--time-distribution);
 }
 
 .maps {
   color: var(--white-color);
   margin-bottom: 9px;
+
+  transition: 250ms var(--time-distribution);
 }
 .maps:hover,
 .maps:focus {
@@ -875,6 +885,7 @@ a {
   fill: var(--white-color);
   background-color: rgba(255, 255, 255, 0.1);
   outline: none;
+  transition: 250ms var(--time-distribution);
 }
 .network-join:hover,
 .network-join:focus {
@@ -985,6 +996,8 @@ a {
   height: 30px;
   right: 8px;
   top: 8px;
+
+  transition: 250ms var(--time-distribution);
 
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
