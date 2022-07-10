@@ -722,14 +722,7 @@ a {
   line-height: 1.88;
   margin: 0;
 }
-.examples-content {
-  position: relative; 
-  padding: 20px 24px;
-  z-index: 2;
 
-  border: 1px solid #eeeeee;
-  border-top: none;
-}
 /* -----------------------------------------------------------------------КОНТАКТЫ------------------------------------------------------------------------------- */
 .contacts {
   display: flex;
@@ -918,59 +911,74 @@ a {
   padding: 0;
 }
 .flex-element {
-  position: relative;
+  /* position: relative;   */
   display: block;
-  margin: 15px;
-  overflow: hidden;
-  /* z-index: 1; */
+  
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  top: 1px;
+  left: 0;   
 
+  margin: 15px;
   flex-basis: calc(100% / 3 - 30px);
-  transition: 250ms var(--time-distribution); 
-  /* transition:250ms var(--time-distribution);
-  webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms; */
+  /* webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  /* transition: 250ms var(--time-distribution);  */
+  
+}
+.flex-element:nth-child(-n + 3) {
+  margin-bottom: 0;
 }
 
 /* ---------------------------------------------------------ВЫПЛЫВАЮЩЕЕ ОПИСАНИЕ КАРТОЧТИ---------------------------------------------------------*/
 .description-projects {
-   /* display: flex;  */
-  justify-content: center;
-  align-items: center;
-  position: absolute; 
-  opacity: 0;
-  bottom: 109px;
+  position: absolute;
+  content: "";
   width: 100%;
+  height: 100%;
+  top: 1px;
   left: 0;
-  height: 294px;
-  padding: 63px 24px;
-   
-  transform: translateY(100%);
-  transition: 250ms var(--time-distribution); 
+  background-color: rgba(33, 150, 243, 0.9);
 
+  transform: translateY(100%);
+  
+  transition: transform 250ms var(--time-distribution); 
+
+}
+.examples-content {
+
+  padding: 20px 24px;
+  
+  border-top: none;
+}
+.thumb {
+  position: relative;
+  overflow: hidden;
+  transition: 250ms var(--time-distribution); 
 }
 .description {
   display: block;
-
-  width: 370px;
-  height: 293px;
-  /* webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms; */
 }
 .descr-text {
-  position: absolute;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
-   opacity: 0; 
- 
+
+  padding: 65px 24px;
 
   color: var(--white-color);
-  background: rgba(33, 150, 243, 0.9);
+
 }
-.flex-element:hover .description-projects,
-.flex-element:focus .description-projects {
+.flex-elementb:hover,
+.flex-element:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    opacity: 1;
-    
+}
+.flex-element:hover .description-projects,
+.flex-elementb:focus .description-projects {
+ 
+  transform: translateY(0);
+  transition: transform 250ms var(--time-distribution); 
 }
 
 /* -------------------------------------------------------------------МОДАЛКА-1----------------------------------- */
@@ -988,6 +996,7 @@ a {
   visibility: hidden;
   opacity: 1;
   pointer-events: none;
+  webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms var(--time-distribution); 
 }
 
@@ -1002,7 +1011,9 @@ a {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%);
-  transition: 250ms var(--time-distribution);
+  webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms var(--time-distribution); 
+  opacity: 1;
 }
 .close-modal {
   display: flex;
